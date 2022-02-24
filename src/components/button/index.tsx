@@ -4,6 +4,7 @@ import { getColor } from "../../utils/colors";
 type ButtonProps = {
   variant: "primary" | "danger" | "gray" | "warning";
   size: "default" | "large" | "full";
+  disabled: boolean;
 };
 
 const Button = styled.button<ButtonProps>`
@@ -12,9 +13,16 @@ const Button = styled.button<ButtonProps>`
   border-radius: 5px;
 
   background-color: ${({ variant }) => {
+    if (variant === "gray") {
+      return getColor(variant, "light");
+    }
     return getColor(variant);
   }};
-  color: #ffffff;
+  color: ${({ variant }) => {
+    if (variant === "gray") {
+      return getColor("gray", "dark");
+    } else return "#ffffff";
+  }};
   padding: ${({ size }) => {
     if (size === "default") {
       return "8px 12px";
