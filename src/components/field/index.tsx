@@ -4,7 +4,10 @@ import Label from "./Label";
 import Message from "./Message";
 
 /* Context */
-const FieldContext = createContext<string | null>(null);
+export const FieldContext = createContext<{
+  type: "error" | "info" | "success";
+  message?: string;
+}>({ type: "info", message: "" });
 
 /* Interface */
 interface IField {
@@ -14,11 +17,19 @@ interface IField {
 }
 
 /* Field Container */
-const Field: React.FC & IField = ({ children }) => {
+const Field: React.FC<{
+  type: "error" | "info" | "success";
+  message?: string;
+}> &
+  IField = ({ children, message, type }) => {
   return (
-    <FieldContext.Provider value={"Hello"}>{children}</FieldContext.Provider>
+    <FieldContext.Provider value={{ message, type }}>
+      {children}
+    </FieldContext.Provider>
   );
 };
+
+Field.displayName = "Field";
 
 Field.Label = Label;
 Field.Message = Message;

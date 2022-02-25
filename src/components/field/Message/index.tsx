@@ -20,4 +20,6 @@ const Message = styled.p<IMessage>`
   padding: 0px;
 `;
 
+Message.displayName = "Message";
+
 export default Message;

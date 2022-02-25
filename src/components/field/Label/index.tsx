@@ -8,4 +8,6 @@ const Label = styled.label`
   color: ${getColor("gray")};
 `;
 
+Label.displayName = "Label";
+
 export default Label;
