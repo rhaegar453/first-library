@@ -1,10 +1,17 @@
 import React from "react";
+import styled from "styled-components";
+import { getColor } from "../../../utils/colors";
 
-const Input = React.forwardRef<
-  HTMLInputElement,
-  React.PropsWithoutRef<"input">
->(({ children }, ref) => {
-  return <input ref={ref}>{children}</input>;
-});
+const Input = styled.input`
+  width: -webkit-fill-available;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 2px solid;
+  border-color: ${getColor("gray", "light")};
+  outline: none;
+  margin: 3px 0px;
+`;
+
+Input.displayName = "Input";
 
 export default Input;

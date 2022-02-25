@@ -1,10 +1,11 @@
 import React from "react";
+import styled from "styled-components";
+import { getColor } from "../../../utils/colors";
 
-const Label = React.forwardRef<
-  HTMLParagraphElement,
-  React.PropsWithoutRef<"p">
->(({ children }, ref) => {
-  return <p ref={ref}>{children}</p>;
-});
+const Label = styled.label`
+  font-size: 16px;
+  margin-left: 10px;
+  color: ${getColor("gray")};
+`;
 
 export default Label;
