@@ -9,8 +9,15 @@ type ButtonProps = {
 
 const Button = styled.button<ButtonProps>`
   font-size: 16px;
-  border: 0px;
+  border: 1px solid #e8e8e8;
   border-radius: 5px;
+  &:hover {
+    transition: 0.2s;
+    filter: contrast(1.1);
+  }
+  &:disabled {
+    opacity: 0.6;
+  }
 
   background-color: ${({ variant }) => {
     if (variant === "gray") {
