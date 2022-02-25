@@ -21,6 +21,7 @@ const Field: React.FC<{
     <div style={{ marginTop: 10 }}>
       <FieldContext.Provider value={{ message, type }}>
         {children}
+        {message && <Field.Message type={type}>{message}</Field.Message>}
       </FieldContext.Provider>
     </div>
   );

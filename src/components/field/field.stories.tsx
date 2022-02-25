@@ -21,7 +21,6 @@ export const withDefault = (args: any) => (
   <Field type="error" message="Hello World this is Shivaraj Bakale">
     <Field.Label>Hello World</Field.Label>
     <Field.Input placeholder="Hello World this is Shivaraj"></Field.Input>
-    <Field.Message>Some random message here</Field.Message>
   </Field>
 );
 
@@ -31,17 +30,14 @@ export const withCombined = (args: any) => {
       <Field message="Hello World this is Shivaraj Bakale">
         <Field.Label>Name</Field.Label>
         <Field.Input placeholder="Hello World this is Shivaraj"></Field.Input>
-        <Field.Message>Some random message here</Field.Message>
       </Field>
       <Field message="Hello World this is Shivaraj Bakale">
         <Field.Label>Age</Field.Label>
         <Field.Input placeholder="Hello World this is Shivaraj"></Field.Input>
-        <Field.Message>Some random message here</Field.Message>
       </Field>
       <Field message="Hello World this is Shivaraj Bakale">
         <Field.Label>Gender</Field.Label>
         <Field.Input placeholder="Hello World this is Shivaraj"></Field.Input>
-        <Field.Message>Some random message here</Field.Message>
       </Field>
     </div>
   );

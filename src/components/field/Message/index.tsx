@@ -4,7 +4,7 @@ import { getColor } from "../../../utils/colors";
 import FieldContext from "../field.context";
 
 type IMessage = {
-  type: "error" | "info" | "success";
+  type?: "error" | "info" | "success";
 };
 
 const MessageStyle = styled.p<IMessage>`
@@ -26,7 +26,7 @@ MessageStyle.displayName = "MessageStyle";
 
 const Message = React.forwardRef<
   HTMLParagraphElement,
-  React.ComponentPropsWithRef<"p">
+  React.ComponentPropsWithRef<"p"> & IMessage
 >(({ children, ...rest }, ref) => {
   const { type } = useContext(FieldContext);
   return (
