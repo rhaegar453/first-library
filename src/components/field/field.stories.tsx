@@ -20,9 +20,7 @@ export default {
 export const withDefault = (args: any) => (
   <Field type="error" message="Hello World this is Shivaraj Bakale">
     <Field.Label>Hello World</Field.Label>
-    <Field.Input placeholder={args.placeholder}></Field.Input>
-    <Field.Message type={args.type}>
-      Hey there this is Shivaraj Bakale
-    </Field.Message>
+    <Field.Input placeholder="Hello World this is Shivaraj"></Field.Input>
+    <Field.Message>Hey there this is Shivaraj Bakale</Field.Message>
   </Field>
 );

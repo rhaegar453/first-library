@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
-import { FieldContext } from "..";
 import { getColor } from "../../../utils/colors";
 
 type IInputStyle = {
@@ -11,7 +10,7 @@ const InputStyle = styled.input<IInputStyle>`
   width: -webkit-fill-available;
   padding: 8px 10px;
   border-radius: 5px;
-  border: 2px solid;
+  border: 1px solid;
   border-color: ${({ variant }) => {
     if (variant === "error") {
       return getColor("danger");
@@ -25,15 +24,13 @@ const InputStyle = styled.input<IInputStyle>`
   margin: 3px 0px;
 `;
 
+InputStyle.displayName = "InputStyle";
+
 const Input = React.forwardRef<
   HTMLInputElement,
   React.ComponentPropsWithRef<"input">
 >(({ ...rest }, ref) => {
-  const { type } = useContext(FieldContext);
-
-  return <InputStyle variant={type} ref={ref} {...rest}></InputStyle>;
+  return <InputStyle variant="error" {...rest} ref={ref} />;
 });
-
-Input.displayName = "Input";
 
 export default Input;

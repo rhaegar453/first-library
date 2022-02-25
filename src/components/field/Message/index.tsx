@@ -1,11 +1,13 @@
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { FieldContext } from "..";
 import { getColor } from "../../../utils/colors";
 
 type IMessage = {
   type: "error" | "info" | "success";
 };
 
-const Message = styled.p<IMessage>`
+const MessageStyle = styled.p<IMessage>`
   margin-left: 10px;
   color: ${({ type }) => {
     if (type == "error") {
@@ -20,6 +22,20 @@ const Message = styled.p<IMessage>`
   padding: 0px;
 `;
 
-Message.displayName = "Message";
+MessageStyle.displayName = "MessageStyle";
+
+const Message = React.forwardRef<
+  HTMLParagraphElement,
+  React.ComponentPropsWithRef<"p">
+>(({ children, ...rest }, ref) => {
+  const { type } = useContext(FieldContext);
+  return (
+    <MessageStyle type={type} ref={ref} {...rest}>
+      {children}
+    </MessageStyle>
+  );
+});
+
+Message.displayName = "MessageStyle";
 
 export default Message;
