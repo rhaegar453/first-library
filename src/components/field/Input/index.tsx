@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { getColor } from "../../../utils/colors";
 
 type IInputStyle = {
-  variant: "error" | "info" | "success";
+  variant?: "error" | "info" | "success";
 };
 
 const InputStyle = styled.input<IInputStyle>`
@@ -31,7 +31,7 @@ const Input = React.forwardRef<
   HTMLInputElement,
   React.ComponentPropsWithRef<"input"> & IInputStyle
 >(({ variant, ...rest }, ref) => {
-  return <InputStyle variant="error" {...rest} ref={ref} />;
+  return <InputStyle variant={variant} {...rest} ref={ref} />;
 });
 
 export default Input;

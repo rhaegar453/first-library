@@ -18,26 +18,30 @@ export default {
 };
 
 export const withDefault = (args: any) => (
-  <Field message="Hello World this is Shivaraj Bakale">
+  <Field type="error" message="Hello World this is Shivaraj Bakale">
     <Field.Label>Hello World</Field.Label>
     <Field.Input placeholder="Hello World this is Shivaraj"></Field.Input>
+    <Field.Message>Some random message here</Field.Message>
   </Field>
 );
 
 export const withCombined = (args: any) => {
   return (
     <div>
-      <Field message="Hello World this is the message">
+      <Field message="Hello World this is Shivaraj Bakale">
         <Field.Label>Name</Field.Label>
-        <Field.Input placeholder="Please enter your Name"></Field.Input>
+        <Field.Input placeholder="Hello World this is Shivaraj"></Field.Input>
+        <Field.Message>Some random message here</Field.Message>
       </Field>
-      <Field message="Hello World this is the message">
+      <Field message="Hello World this is Shivaraj Bakale">
         <Field.Label>Age</Field.Label>
-        <Field.Input placeholder="Please enter your Name"></Field.Input>
+        <Field.Input placeholder="Hello World this is Shivaraj"></Field.Input>
+        <Field.Message>Some random message here</Field.Message>
       </Field>
-      <Field message="Hello World this is the message">
-        <Field.Label>Sex</Field.Label>
-        <Field.Input placeholder="Please enter your Name"></Field.Input>
+      <Field message="Hello World this is Shivaraj Bakale">
+        <Field.Label>Gender</Field.Label>
+        <Field.Input placeholder="Hello World this is Shivaraj"></Field.Input>
+        <Field.Message>Some random message here</Field.Message>
       </Field>
     </div>
   );

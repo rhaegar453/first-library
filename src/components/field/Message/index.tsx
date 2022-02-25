@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { FieldContext } from "..";
 import { getColor } from "../../../utils/colors";
+import FieldContext from "../field.context";
 
 type IMessage = {
   type: "error" | "info" | "success";
