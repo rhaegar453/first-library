@@ -11,6 +11,7 @@ const InputStyle = styled.input<IInputStyle>`
   padding: 8px 10px;
   border-radius: 5px;
   border: 1px solid;
+  background-color: ${"#f8f8f8"};
   border-color: ${({ variant }) => {
     if (variant === "error") {
       return getColor("danger");
@@ -28,8 +29,8 @@ InputStyle.displayName = "InputStyle";
 
 const Input = React.forwardRef<
   HTMLInputElement,
-  React.ComponentPropsWithRef<"input">
->(({ ...rest }, ref) => {
+  React.ComponentPropsWithRef<"input"> & IInputStyle
+>(({ variant, ...rest }, ref) => {
   return <InputStyle variant="error" {...rest} ref={ref} />;
 });
 

@@ -18,9 +18,27 @@ export default {
 };
 
 export const withDefault = (args: any) => (
-  <Field type="error" message="Hello World this is Shivaraj Bakale">
+  <Field message="Hello World this is Shivaraj Bakale">
     <Field.Label>Hello World</Field.Label>
     <Field.Input placeholder="Hello World this is Shivaraj"></Field.Input>
-    <Field.Message>Hey there this is Shivaraj Bakale</Field.Message>
   </Field>
 );
+
+export const withCombined = (args: any) => {
+  return (
+    <div>
+      <Field message="Hello World this is the message">
+        <Field.Label>Name</Field.Label>
+        <Field.Input placeholder="Please enter your Name"></Field.Input>
+      </Field>
+      <Field message="Hello World this is the message">
+        <Field.Label>Age</Field.Label>
+        <Field.Input placeholder="Please enter your Name"></Field.Input>
+      </Field>
+      <Field message="Hello World this is the message">
+        <Field.Label>Sex</Field.Label>
+        <Field.Input placeholder="Please enter your Name"></Field.Input>
+      </Field>
+    </div>
+  );
+};
