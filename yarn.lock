@@ -8543,6 +8543,11 @@
     "hash-base" "^3.0.0"
     "inherits" "^2.0.1"
 
+"rollup-plugin-analyzer@^4.0.0":
+  "integrity" "sha512-LL9GEt3bkXp6Wa19SNR5MWcvHNMvuTFYg+eYBZN2OIFhSWN+pEJUQXEKu5BsOeABob3x9PDaLKW7w5iOJnsESQ=="
+  "resolved" "https://registry.npmjs.org/rollup-plugin-analyzer/-/rollup-plugin-analyzer-4.0.0.tgz"
+  "version" "4.0.0"
+
 "rollup-plugin-delete@^2.0.0":
   "integrity" "sha512-/VpLMtDy+8wwRlDANuYmDa9ss/knGsAgrDhM+tEwB1npHwNu4DYNmDfUL55csse/GHs9Q+SMT/rw9uiaZ3pnzA=="
   "resolved" "https://registry.npmjs.org/rollup-plugin-delete/-/rollup-plugin-delete-2.0.0.tgz"

@@ -8,10 +8,6 @@ import pkg from './package.json';
 export default [
     {
         input:'src/index.ts',
-        output:[
-            {file:pkg.main,format:'cjs'},
-            {file:pkg.module,format:'esm'},
-        ],
         plugins:[
             del({targets:'dist/*'}),
             externals({deps:true}),
@@ -20,10 +16,15 @@ export default [
             }),
             commonjs(),
             babel({
+                babelHelpers:'runtime',
                 exclude:'node_modules/**',
-                extensions:['.js','.jsx','.ts','.tsx'],
+                extensions:['.ts','.tsx'],
             }),
 
         ],
+        output:[
+            {file:pkg.main,format:'cjs'},
+            {file:pkg.module,format:'esm'},
+        ]
     }
 ]
