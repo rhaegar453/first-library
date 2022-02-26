@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.cjs.js",
+  "source":"src/index.js",
   "module": "dist/index.esm.js",
   "sideEffects":false,
   "types": "dist/typings/index.d.ts",
