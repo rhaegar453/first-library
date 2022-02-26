@@ -27,15 +27,15 @@ export const withDefault = (args: any) => (
 export const withCombined = (args: any) => {
   return (
     <div>
-      <Field message="Hello World this is Shivaraj Bakale">
+      <Field {...args} message="Hello World this is Shivaraj Bakale">
         <Field.Label>Name</Field.Label>
         <Field.Input placeholder="Hello World this is Shivaraj"></Field.Input>
       </Field>
-      <Field message="Hello World this is Shivaraj Bakale">
+      <Field {...args} message="Hello World this is Shivaraj Bakale">
         <Field.Label>Age</Field.Label>
         <Field.Input placeholder="Hello World this is Shivaraj"></Field.Input>
       </Field>
-      <Field message="Hello World this is Shivaraj Bakale">
+      <Field {...args} message="Hello World this is Shivaraj Bakale">
         <Field.Label>Gender</Field.Label>
         <Field.Input placeholder="Hello World this is Shivaraj"></Field.Input>
       </Field>
