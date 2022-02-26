@@ -2,7 +2,7 @@
   "name": "@rhaegar453/first-library",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "sideEffects":false,
   "types": "dist/typings/index.d.ts",

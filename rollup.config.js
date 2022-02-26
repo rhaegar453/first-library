@@ -7,7 +7,7 @@ import pkg from './package.json';
 
 export default [
     {
-        input:'./src/index.ts',
+        input:'src/index.ts',
         plugins:[
             del({targets:'dist/*'}),
             externals({deps:true}),
