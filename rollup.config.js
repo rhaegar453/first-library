@@ -4,6 +4,7 @@ import babel from '@rollup/plugin-babel';
 import externals from 'rollup-plugin-node-externals';
 import del from 'rollup-plugin-delete'
 import pkg from './package.json';
+import {terser} from 'rollup-plugin-terser';
 
 export default [
     {
@@ -20,7 +21,7 @@ export default [
                 exclude:'node_modules/**',
                 extensions:['.ts','.tsx'],
             }),
-
+            (process.env.NODE_ENV==='production'&&terser())
         ],
         output:[
             {file:pkg.main,format:'cjs'},
