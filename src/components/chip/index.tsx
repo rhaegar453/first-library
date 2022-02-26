@@ -25,7 +25,7 @@ const Chip = styled.span<IChip>`
     }
   }};
   border-radius: 100px;
-  font-size: 14px;
+  font-size: 12px;
   padding: 8px 16px;
   cursor: default;
 `;
